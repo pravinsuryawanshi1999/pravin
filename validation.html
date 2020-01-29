@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Regestrition form</title>
+    <script>
+      function validateform()
+      {
+        if( document.RegForm.Fname.value.length <=4 ) {
+            alert( "Please provide your first name!" );
+            document.RegForm.Fname.focus() ;
+            return false;
+         }
+         if( document.RegForm.Lname.value.length <=4 ) {
+            alert( "Please provide your  last name!" );
+            document.RegForm.Fname.focus() ;
+            return false;
+         }
+         rex=/[a-z|0-9|A-Z]+@[a-z]+\.[a-z]+/
+         if( !rex.test(document.RegForm.Email.value) ) {
+            alert( "Please provide your Email!" );
+            document.RegForm.Email.focus() ;
+            return false;
+         }
+         if( document.RegForm.pincode.value == ""  ||
+            document.RegForm.pincode.value.length != 6) {
+            
+            alert( "Please provide a pincode " );
+            document.RegForm.pincode.focus() ;
+            return false;
+         }
+         rex=/[0-9]/
+         if( !rex.test(document.RegForm.number.value) ) {
+            alert( "Please provide your  mobile number!" );
+            document.RegForm.number.focus() ;
+            return false;
+         }
+         rex=/[a-z]/
+         if( !rex.test(document.RegForm.add.value) ) {
+            alert( "Please provide your  proper address" );
+            document.RegForm.add.focus() ;
+            return false;
+         }
+         if( document.RegForm.Gender.value="") {
+            alert( "Please provide your  gender" );
+            document.RegForm.Gender.focus() ;
+            return false;
+         }
+         if( document.RegForm.pass.value == ""  ||
+            document.RegForm.pass.value.length != 6) {
+            
+            alert( "Please provide a pass " );
+            document.RegForm.pass.focus() ;
+            return false;
+         }
+         if( document.RegForm.pass.value == ""  ||
+            document.RegForm.pass1.value.length != 6) {
+            
+            alert( "Please provide a pass " );
+            document.RegForm.pass1.focus() ;
+            return false;
+         }
+         return( true );
+        } 
+    </script>
+</head>  
+<center> 
+<body>
+    
+    <form name="RegForm" onsubmit="return validateform()" action="aa.html";>
+            <h3>REGISTRATION FORM</h3>
+            <hr size="4z" color="black">
+            <table cellspacing="15">
+                    <tr>
+                        <td> First Name:</td>
+                        <td><input type="text" placeholder=" First Name" name="Fname"></td>
+                    </tr>
+                    <tr>
+                        <td>  Last Name:</td>
+                        <td><input type="text" placeholder="Last Name" name="Lname"></td>
+                    </tr>
+                    <tr>
+                            <td>Birth Date:</td>
+                            <td>
+                                <select name=" Birth_Day" id="Birth_Day" >
+                                    <option value="-1" selected >Day</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                    <option value="25">25</option>
+                                    <option value="26">26</option>
+                                    <option value="27">27</option>
+                                    <option value="28">28</option>
+                                    <option value="29">29</option>
+                                    <option value="30">30</option>
+                                    <option value="31">31</option>
+                                </select>
+                            
+                            
+                                <select name="Birth_Month" id="Birth_Month">
+                                    <option value="-1" selected>Month</option>
+                                    <option value="1" >jan</option>
+                                    <option value="2" >feb</option>
+                                    <option value="3" >mar</option>
+                                    <option value="4" >apri</option>
+                                    <option value="5" >May</option>
+                                    <option value="6" >jun</option>
+                                    <option value="7" >jul</option>
+                                    <option value="8" >aug</option>
+                                    <option value="9" >sep</option>
+                                    <option value="10" >oct</option>
+                                    <option value="11" >nov</option>
+                                    <option value="12" >dec</option>
+    
+    
+                                </select>
+    
+                                <select>
+                                    <option value="-1" selected>years</option>
+                                    <option value="1">1998</option>
+                                    <option value="2">1999</option>
+                                    <option value="3">2000</option>
+                                    <option value="4">2001</option>
+                                    <option value="5">2002</option>
+                                    <option value="6">2003</option>
+                                    <option value="7">2004</option>
+                                    <option value="8">2005</option>
+                                    <option value="9">2006</option>
+                                    <option value="10">2007</option>
+                                    <option value="11">2008</option>
+                                    <option value="12">2009</option>
+                                    <option value="13">2010</option>
+                                    <option value="14">2011</option>
+                                    <option value="15">2012</option>
+                                    <option value="16">2013</option>
+                                    <option value="17">2014</option>
+                                    <option value="18">2015</option>
+                                    <option value="19">2016</option>
+                                    <option value="20">2017</option>
+                                    <option value="21">2018</option>
+                                    <option value="22">2019</option>
+                                    <option value="23">2020</option>
+    
+                                </select>
+                            </td>
+    
+                        </tr>
+                    
+                    
+                        <tr>
+                                <td>Gender:</td>
+                                <td>
+                                    <input type="radio" name="Gender">Male
+                                    <input type="radio" name="Gender">Female 
+                                </td>
+                            </tr>
+                        <tr>
+                        <td>Email:</td>
+                        <td><input type="text" placeholder="Email" name="Email"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>mobile  no</td>
+                        <td>
+                            <select>
+                                <option>91+</option>
+                            </select>
+                            <input type="phone" name="number">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Address:</td>
+                        <td>
+                            <input type="text" placeholder="address" name="add" >
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td>Pin Code:</td>
+                        <td>
+                            <input type="text" placeholder="Pin Code" name="pincode" >
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                            <td> Create Password:</td>
+                            <td><input type="  password" placeholder="Password" name="pass"></td>
+                        </tr>
+                        <tr>
+                                <td> Confirm Password:</td>
+                                <td><input type="  password" placeholder="Password" name="pass1"></td>
+                            </tr>
+                   
+                </table>
+                <center>
+                       
+                                <td></td>
+                                <td><input type="submit"  value="submit"</td>
+        
+                            
+                </center>
+                
+    </form>
+  
+    
+</body>
+</center>
+
+
+</html>
